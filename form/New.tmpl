@@ -1,0 +1,32 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-md-12 text-center">
+          <h2>New Product</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+         <form method="POST" action="insert">
+          <div class="mb-3">
+            <label for="name" class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="name" name="name" />
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price" />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100">Save</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  {{ template "Footer" }}
+{{ end }}
